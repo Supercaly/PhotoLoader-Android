@@ -12,7 +12,7 @@ android.enableJetifier=true
 ```
 
 ## Installation
-[![](https://jitpack.io/v/Supercaly/PhotoLoader.svg)](https://jitpack.io/#Supercaly/PhotoLoader)
+[![](https://jitpack.io/v/Supercaly/PhotoLoader-Android.svg)](https://jitpack.io/#Supercaly/PhotoLoader-Android)
 
 Add it in your root build.gradle at the end of repositories
 
