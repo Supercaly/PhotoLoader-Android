@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PhotoLoader">
+        <attr name="max_photo_num" format="integer"/>
+        <attr name="folder_name" format="string"/>
+        <attr name="done_button_title" format="string"/>
+        <attr name="limit_message" format="string"/>
+    </declare-styleable>
+</resources>
