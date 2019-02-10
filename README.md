@@ -30,8 +30,8 @@ Add the dependency
 ```
 implementation 'com.github.Supercaly:PhotoLoader:version'
 ```
-#### Maven
 
+#### Maven
 ```xml
 <dependency>
   <groupId>com.github.Supercaly</groupId>
@@ -42,25 +42,29 @@ implementation 'com.github.Supercaly:PhotoLoader:version'
 
 ## Usage
 PhotoLoader has been redesigned so you no longer need to use the fragment, but simply add the PhotoLoader widget
-to your view's .xml file
+to your view's .xml file and use the custom attributes
 
 ```xml
 <com.supercaly.library.PhotoLoader
     android:id="@+id/photo_loader"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:max_photo_num="8"
-    app:folder_name="Folder Name"
-    app:done_button_title="Done"
-    app:limit_message="You've reached the maximum limit!!!"/>
+    app:pl_title="Title of the PhotoLoader"
+    app:pl_done_button_title="Continue"
+    app:pl_folder_name="@string/app_name"
+    app:pl_limit_message="Custom maximum limit message"
+    app:pl_max_photo_num="4"
+    app:pl_button_drawable="@drawable/ic_add_button"
+    app:pl_error_button_drawable="@drawable/ic_ad_button_error"/>
 ```
 
-then in your activity's onCreate
+then in your activity's onCreate: 
 
 ```kotlin
 val photoLoader = findViewById(R.id.photo_loader)
 photoLoader.setImageBuilder(this@MainActivity)
 ```
+
 
 #### Get the photos
 To get the selected images you have different methods
