@@ -173,7 +173,7 @@ class PhotoLoader(context: Context, attrs: AttributeSet?):
         mTitleView.textSize = 18f
 
         val titleLayoutParams = LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
-        titleLayoutParams.setMargins(16, 0, 0, 8)
+        titleLayoutParams.bottomMargin = 8
         mTitleView.layoutParams = titleLayoutParams
 
         addView(mTitleView)
