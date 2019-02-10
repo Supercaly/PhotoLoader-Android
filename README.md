@@ -1,8 +1,8 @@
 # PhotoLoader
 The android library that allow users to choose any photo from their devices or cameras, show them a list and get the uri of the photos <br/>
-<img src="https://raw.githubusercontent.com/Supercaly/PhotoLoader/master/images/screen-empty.png" width="200">
-<img src="https://raw.githubusercontent.com/Supercaly/PhotoLoader/master/images/screen-data.png" width="200">
-<img src="https://raw.githubusercontent.com/Supercaly/PhotoLoader/master/images/screen-error.png" width="200">
+<img src="https://github.com/Supercaly/PhotoLoader-Android/blob/master/images/screen-empty.png?raw=true" width="200">
+<img src="https://github.com/Supercaly/PhotoLoader-Android/blob/master/images/screen-data.png?raw=true" width="200">
+<img src="https://github.com/Supercaly/PhotoLoader-Android/blob/master/images/screen-error.png?raw=true" width="200">
 
 ## Now Using Androidx
 Starting from the version 1.0.0 we are using androidx so make sure to add this two lines in the gradle.properties
