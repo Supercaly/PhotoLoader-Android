@@ -20,7 +20,10 @@ class MainActivity : AppCompatActivity() {
 
         val btn = findViewById<Button>(R.id.button)
         btn.setOnClickListener {
-            photoLoader.images { data -> Toast.makeText(this@MainActivity, "$data", Toast.LENGTH_LONG).show() }
+            if (photoLoader.isEmpty)
+                photoLoader.error = true
+            photoLoader.images { data ->
+                Toast.makeText(this@MainActivity, "$data", Toast.LENGTH_LONG).show() }
         }
     }
 

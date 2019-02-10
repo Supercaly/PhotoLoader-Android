@@ -1,11 +1,11 @@
 # PhotoLoader
 The android library that allow users to choose any photo from their devices or cameras, show them a list and get the uri of the photos <br/>
-<img src="https://raw.githubusercontent.com/Supercaly/PhotoLoader/master/screen-empty.png" width="200">
-<img src="https://raw.githubusercontent.com/Supercaly/PhotoLoader/master/screen-data.png" width="200">
-<img src="https://raw.githubusercontent.com/Supercaly/PhotoLoader/master/screen-error.png" width="200">
+<img src="https://raw.githubusercontent.com/Supercaly/PhotoLoader/master/images/screen-empty.png" width="200">
+<img src="https://raw.githubusercontent.com/Supercaly/PhotoLoader/master/images/screen-data.png" width="200">
+<img src="https://raw.githubusercontent.com/Supercaly/PhotoLoader/master/images/screen-error.png" width="200">
 
 ## Now Using Androidx
-Starting from the version 1.2.1 we are using androidx so make sure to add this two lines in the gradle.properties
+Starting from the version 1.0.0 we are using androidx so make sure to add this two lines in the gradle.properties
 ```
 android.useAndroidX=true
 android.enableJetifier=true
@@ -27,8 +27,8 @@ allprojects {
 
 Add the dependency
 #### Gradle
-```kotlin
-implementation 'com.github.Supercaly:PhotoLoader:1.0.0'
+```
+implementation 'com.github.Supercaly:PhotoLoader:version'
 ```
 #### Maven
 
@@ -36,7 +36,7 @@ implementation 'com.github.Supercaly:PhotoLoader:1.0.0'
 <dependency>
   <groupId>com.github.Supercaly</groupId>
   <artifactId>PhotoLoader</artifactId>
-  <version>1.2.1</version>
+  <version>version</version>
 </dependency>
 ```
 
@@ -87,7 +87,7 @@ val isEmpty = photoloader.isEmpty()
 The image picking part is made possible by the ***Image Picker*** library by nguyenhoanglam.
 Find it at https://github.com/nguyenhoanglam/ImagePicker
 
-All the miages are rendered by the ***Picasso*** library by Square http://square.github.io/picasso/ <br/>
+All the images are rendered by the ***Picasso*** library by Square http://square.github.io/picasso/ <br/>
 and the circle effect are given by the ***Picasso Transformation*** library by wasabeef https://github.com/wasabeef/picasso-transformations
 
 ## Apps that use PhotoLoader

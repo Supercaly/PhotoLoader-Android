@@ -14,22 +14,21 @@ import java.io.File
 class PhotoAdapter(private val maxPhotoSize: Int,
                    private val addButton: AddButton):
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+
     companion object {
         private const val TAG = "PhotoAdapter"
         private const val ITEM_TYPE = 0
         private const val ADD_TYPE = 1
     }
 
-    /**
+    /*
      * Variable to store all the selected image uri strings
      */
     var data: ArrayList<String> = ArrayList()
         private set
 
-    /**
+    /*
      * Method to add a list the data
-     *
-     * @param list List of Image
      */
     fun addAll(list: List<Image>) {
         if (!list.isEmpty() && addButton.error) addButton.error = false
@@ -39,7 +38,7 @@ class PhotoAdapter(private val maxPhotoSize: Int,
         notifyDataSetChanged()
     }
 
-    /**
+    /*
      * Method for restoring the data from saved state
      */
     fun restoreData(list: List<String>?) {
@@ -52,7 +51,7 @@ class PhotoAdapter(private val maxPhotoSize: Int,
         }
     }
 
-    /**
+    /*
      * Method for removing one item from the data
      */
     private fun removeItem(s: String) {
@@ -87,7 +86,7 @@ class PhotoAdapter(private val maxPhotoSize: Int,
 
     override fun getItemViewType(position: Int): Int { return if (position == itemCount - 1) ADD_TYPE else ITEM_TYPE }
 
-    /**
+    /*
      * Class that hold the Item type view
      */
     class ItemHolder(item: View): RecyclerView.ViewHolder(item) {
@@ -95,7 +94,7 @@ class PhotoAdapter(private val maxPhotoSize: Int,
         var remove: ImageView = item.findViewById(R.id.remove_img)
     }
 
-    /**
+    /*
      * Class that hold the AddButton view
      */
     class AddButtonHolder(item: View): RecyclerView.ViewHolder(item)

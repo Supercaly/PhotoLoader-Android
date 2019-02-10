@@ -7,14 +7,11 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 
-class AddButton(context: Context, attrs: AttributeSet?): SquaredRelativeLayout(context, attrs), View.OnClickListener {
-    companion object {
-        private const val TAG = "AddButton"
-    }
+class AddButton(context: Context, attrs: AttributeSet?): SquaredRelativeLayout(context, attrs) {
 
-    private val normalDrawableResource: Int = R.drawable.ic_add_button
+    var normalDrawableResource: Int = 0
 
-    private val errorDrawableResource: Int = R.drawable.ic_ad_button_error
+    var errorDrawableResource: Int = 0
 
     private var mOnClickListener: OnClickListener? = null
 
@@ -41,27 +38,14 @@ class AddButton(context: Context, attrs: AttributeSet?): SquaredRelativeLayout(c
         addView(mImage)
 
         //Set OnClickListener to ImageView
-        mImage.setOnClickListener(this)
+        mImage.setOnClickListener { mOnClickListener?.onClick() }
 
         //Initialize the image rosource to normal setting error to false
         error = false
     }
 
-
-    override fun onClick(v: View?) {
-        mOnClickListener?.onClick()
-    }
-
     fun setOnClickListener(l: OnClickListener){
         mOnClickListener = l
-    }
-
-    fun setOnClickListener(l: () -> Unit) {
-        mOnClickListener = object : OnClickListener{
-            override fun onClick() {
-                l()
-            }
-        }
     }
 
     interface OnClickListener {
