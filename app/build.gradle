@@ -26,7 +26,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
     //Add the library as api to access the ImagePicker
-    implementation project(':library')
+    implementation project(':photoloader')
 
     //Android layout
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"

@@ -7,19 +7,19 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-    <com.supercaly.library.PhotoLoader
+    <com.supercaly.photoloader.PhotoLoader
         android:id="@+id/photo_loader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
         app:pl_title="Title of the PhotoLoader"
+        app:pl_title_size="14"
         app:pl_done_button_title="Continue"
         app:pl_folder_name="@string/app_name"
         app:pl_limit_message="Custom maximum limit message"
         app:pl_max_photo_num="4"
         app:pl_button_drawable="@drawable/ic_add_button"
         app:pl_error_button_drawable="@drawable/ic_ad_button_error"
-
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
